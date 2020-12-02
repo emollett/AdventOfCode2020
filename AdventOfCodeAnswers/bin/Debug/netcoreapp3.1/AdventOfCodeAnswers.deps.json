@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "AdventOfCodeAnswers/1.0.0": {
+        "dependencies": {
+          "AdventOfCode2020": "1.0.0"
+        },
+        "runtime": {
+          "AdventOfCodeAnswers.dll": {}
+        }
+      },
+      "AdventOfCode2020/1.0.0": {
+        "runtime": {
+          "AdventOfCode2020.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AdventOfCodeAnswers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AdventOfCode2020/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

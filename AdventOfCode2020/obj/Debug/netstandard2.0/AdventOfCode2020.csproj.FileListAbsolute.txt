@@ -1,0 +1,9 @@
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\bin\Debug\netstandard2.0\AdventOfCode2020.deps.json
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\bin\Debug\netstandard2.0\AdventOfCode2020.dll
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\bin\Debug\netstandard2.0\AdventOfCode2020.pdb
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\obj\Debug\netstandard2.0\AdventOfCode2020.csprojAssemblyReference.cache
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\obj\Debug\netstandard2.0\AdventOfCode2020.AssemblyInfoInputs.cache
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\obj\Debug\netstandard2.0\AdventOfCode2020.AssemblyInfo.cs
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\obj\Debug\netstandard2.0\AdventOfCode2020.csproj.CoreCompileInputs.cache
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\obj\Debug\netstandard2.0\AdventOfCode2020.dll
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\obj\Debug\netstandard2.0\AdventOfCode2020.pdb

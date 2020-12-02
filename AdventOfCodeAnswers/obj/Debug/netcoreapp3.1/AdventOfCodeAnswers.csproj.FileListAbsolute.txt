@@ -1,0 +1,16 @@
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\obj\Debug\netcoreapp3.1\AdventOfCodeAnswers.csprojAssemblyReference.cache
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\obj\Debug\netcoreapp3.1\AdventOfCodeAnswers.AssemblyInfoInputs.cache
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\obj\Debug\netcoreapp3.1\AdventOfCodeAnswers.AssemblyInfo.cs
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\obj\Debug\netcoreapp3.1\AdventOfCodeAnswers.csproj.CoreCompileInputs.cache
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\bin\Debug\netcoreapp3.1\AdventOfCodeAnswers.exe
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\bin\Debug\netcoreapp3.1\AdventOfCodeAnswers.deps.json
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\bin\Debug\netcoreapp3.1\AdventOfCodeAnswers.runtimeconfig.json
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\bin\Debug\netcoreapp3.1\AdventOfCodeAnswers.runtimeconfig.dev.json
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\bin\Debug\netcoreapp3.1\AdventOfCodeAnswers.dll
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\bin\Debug\netcoreapp3.1\AdventOfCodeAnswers.pdb
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\bin\Debug\netcoreapp3.1\AdventOfCode2020.dll
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\bin\Debug\netcoreapp3.1\AdventOfCode2020.pdb
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\obj\Debug\netcoreapp3.1\AdventOfCodeAnswers.csproj.CopyComplete
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\obj\Debug\netcoreapp3.1\AdventOfCodeAnswers.dll
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\obj\Debug\netcoreapp3.1\AdventOfCodeAnswers.pdb
+C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCodeAnswers\obj\Debug\netcoreapp3.1\AdventOfCodeAnswers.genruntimeconfig.cache
