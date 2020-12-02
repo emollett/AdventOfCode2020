@@ -17,5 +17,11 @@ namespace AdventOfCode2020.Inputs
             };
             return problemInput;
         }
+
+        public string[] readLines(string path)
+        {
+            string[] problemInput = File.ReadAllLines(path);
+            return problemInput;
+        }
     }
 }

@@ -7,11 +7,15 @@ namespace AdventOfCodeAnswers
     {
         static void Main()
         {
-            var day1 = new ReportRepair();
-            var day1Problem1 = day1.Problem1();
-            Console.WriteLine(day1Problem1);
-            var day1Problem2 = day1.Problem2();
-            Console.WriteLine(day1Problem2);
+            var day2 = new PasswordChecker();
+            var day2Problem1 = day2.checkLotsOfPasswords();
+            Console.WriteLine(day2Problem1);
+
+            //var day1 = new ReportRepair();
+            //var day1Problem1 = day1.Problem1();
+            //Console.WriteLine(day1Problem1);
+            //var day1Problem2 = day1.Problem2();
+            //Console.WriteLine(day1Problem2);
         }
     }
 }
