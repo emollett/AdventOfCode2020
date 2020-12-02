@@ -6,7 +6,7 @@ namespace AdventOfCode2020
 {
     public class ReportRepair
     {
-        public List<int> AddTo2020(List<int> input)
+        public List<int> AddTwoTo2020(List<int> input)
         {
             var output = new List<int> { };
             foreach (int item in input){
@@ -20,9 +20,34 @@ namespace AdventOfCode2020
             return output;
         }
 
+        public List<int> AddThreeTo2020(List<int> input)
+        {
+            var output = new List<int> { };
+            foreach (int item in input)
+            {
+                var newTarget = 2020 - item;
+                foreach(int item2 in input)
+                {
+                    if (input.Contains(newTarget - item2))
+                    {
+                        output.Add(item);
+                        output.Add(item2);
+                        output.Add(input.Find(number => number + item2 == newTarget));
+                        goto Exit;
+                    };
+                }
+            }
+            Exit:
+            return output;
+        }
+
         public int Multiply(List<int> input)
         {
-            var output = input[0] * input[1];
+            var output = 1;
+            foreach (int item in input)
+            {
+                output = output * item;
+            }
             return output;
         }
 
@@ -31,7 +56,17 @@ namespace AdventOfCode2020
             var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\01_01_ReportRepair.txt";
             var inputReaders = new InputReaders();
             var input = inputReaders.readNumbers(path);
-            var entries = AddTo2020(input);
+            var entries = AddTwoTo2020(input);
+            var total = Multiply(entries);
+            return total;
+        }
+
+        public int Problem2()
+        {
+            var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\01_01_ReportRepair.txt";
+            var inputReaders = new InputReaders();
+            var input = inputReaders.readNumbers(path);
+            var entries = AddThreeTo2020(input);
             var total = Multiply(entries);
             return total;
         }
