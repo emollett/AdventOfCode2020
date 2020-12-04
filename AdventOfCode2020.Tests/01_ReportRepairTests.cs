@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace AdventOfCode2020
+namespace AdventOfCode2020.Tests
 {
     public class ReportRepairTests
     {

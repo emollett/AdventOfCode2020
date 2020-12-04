@@ -7,11 +7,15 @@ namespace AdventOfCodeAnswers
     {
         static void Main()
         {
-            var day3 = new TobogganTrajectory();
-            var day3Problem1 = day3.Problem1();
-            Console.WriteLine(day3Problem1);
-            var day3Problem2 = day3.Problem2();
-            Console.WriteLine(day3Problem2);
+            var day4 = new PassportProcessing();
+            var day4Problem1 = day4.problem1();
+            Console.WriteLine(day4Problem1);
+
+            //var day3 = new TobogganTrajectory();
+            //var day3Problem1 = day3.Problem1();
+            //Console.WriteLine(day3Problem1);
+            //var day3Problem2 = day3.Problem2();
+            //Console.WriteLine(day3Problem2);
 
             //var day2 = new PasswordChecker();
             //var day2Problem1 = day2.checkLotsOfPasswords("first");

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace AdventOfCode2020.Inputs
 {
@@ -37,6 +38,20 @@ namespace AdventOfCode2020.Inputs
             }
 
             return grid;
+        }
+
+        public List<string> readParagraphsToList(string path)
+        {
+            var inputString = File.ReadAllText(path);
+            string pattern = @"\r\n\r\n";
+            string[] elements = Regex.Split(inputString, pattern);
+            var paragraphs = new List<string> { };
+            foreach (var element in elements)
+            {
+                var paragraph = element.Replace("\r\n", " ");
+                paragraphs.Add(paragraph);
+            }
+            return paragraphs;
         }
     }
 }
