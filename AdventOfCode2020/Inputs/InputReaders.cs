@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdventOfCode2020.Inputs
 {
-    class InputReaders
+    public class InputReaders
     {
         public List<int> readNumbers(string path)
         {
@@ -22,6 +22,21 @@ namespace AdventOfCode2020.Inputs
         {
             string[] problemInput = File.ReadAllLines(path);
             return problemInput;
+        }
+
+        public List<List<char>> readLinesToGrid(string path)
+        {
+            string[] problemInput = File.ReadAllLines(path);
+            List<List<char>> grid = new List<List<char>>();
+
+            foreach(string line in problemInput)
+            {
+                List<char> row = new List<char>();
+                row.AddRange(line);
+                grid.Add(row);
+            }
+
+            return grid;
         }
     }
 }
