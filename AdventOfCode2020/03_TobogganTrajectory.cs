@@ -43,15 +43,51 @@ namespace AdventOfCode2020
             return numberOfTrees;
         }
 
+        public List<int> testLotsOfSlopes(List<List<int>> slopesToTest, List<List<char>> grid)
+        {
+            var treesInEachSlope = new List<int> { };
+            foreach (var slope in slopesToTest)
+            {
+                var slopeArray = new int[] { slope[0], slope[1] };
+                var itemsOnRoute = moveSleigh(slopeArray, grid);
+                var total = countTrees(itemsOnRoute);
+                treesInEachSlope.Add(total);
+            }
+            return treesInEachSlope;
+        }
+
         public int Problem1()
         {
             var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\03_01_TobogganTrajectory.txt";
             var inputReaders = new InputReaders();
             var input = inputReaders.readLinesToGrid(path);
-            var slope = new int[] { 3, 1 };
+            var slope = new int[] { 1, 2 };
             var itemsOnRoute = moveSleigh(slope, input);
             var total = countTrees(itemsOnRoute);
             return total;
         }
+
+        public long Problem2()
+        {
+            var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\03_01_TobogganTrajectory.txt";
+            var inputReaders = new InputReaders();
+            var helpers = new Helpers();
+            var input = inputReaders.readLinesToGrid(path);
+
+            var slope1 = new List<int>() { 1, 1 };
+            var slope2 = new List<int>() { 3, 1 };
+            var slope3 = new List<int>() { 5, 1 };
+            var slope4 = new List<int>() { 7, 1 };
+            var slope5 = new List<int>() { 1, 2 };
+            var slopesToTest = new List<List<int>>
+            {
+                slope1, slope2, slope3, slope4, slope5
+            };
+
+            var listOfTreeCounts = testLotsOfSlopes(slopesToTest, input);
+            var total = helpers.Multiply(listOfTreeCounts);
+            return total;
+        }
+
     }
 }

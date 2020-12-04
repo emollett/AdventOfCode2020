@@ -105,7 +105,7 @@ namespace AdventOfCode2020.Tests
         }
 
         [Fact]
-        public void Using_example_input()
+        public void Problem1_Using_example_input()
         {
             var tobboganTrajectory = new TobogganTrajectory();
             var inputReaders = new InputReaders();
@@ -117,6 +117,50 @@ namespace AdventOfCode2020.Tests
             Assert.Equal(10, itemsOnRoute.Count);
             int output = tobboganTrajectory.countTrees(itemsOnRoute);
             Assert.Equal(7, output);
+        }
+
+        [Fact]
+        public void Return_number_of_trees_for_multiple_slopes()
+        {
+            var tobboganTrajectory = new TobogganTrajectory();
+            var inputReaders = new InputReaders();
+            var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\03_01_TobogganTrajectory_Test.txt";
+            var grid = inputReaders.readLinesToGrid(path);
+
+            var slope1 = new List<int>() { 1, 1 };
+            var slope2 = new List<int>() { 3, 1 };
+            var slope3 = new List<int>() { 5, 1 };
+            var slopesToTest = new List<List<int>>
+            {
+                slope1, slope2, slope3
+            };
+            var listOfTreeCounts = tobboganTrajectory.testLotsOfSlopes(slopesToTest, grid);
+
+            Assert.Equal(new List<int>() { 2, 7, 3 }, listOfTreeCounts);
+        }
+
+        [Fact]
+        public void Multiply_number_of_trees_for_multiple_slopes()
+        {
+            var tobboganTrajectory = new TobogganTrajectory();
+            var inputReaders = new InputReaders();
+            var helpers = new Helpers();
+            var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\03_01_TobogganTrajectory_Test.txt";
+            var grid = inputReaders.readLinesToGrid(path);
+
+            var slope1 = new List<int>() { 1, 1 };
+            var slope2 = new List<int>() { 3, 1 };
+            var slope3 = new List<int>() { 5, 1 };
+            var slope4 = new List<int>() { 7, 1 };
+            var slope5 = new List<int>() { 1, 2 };
+            var slopesToTest = new List<List<int>>
+            {
+                slope1, slope2, slope3, slope4, slope5
+            };
+            var listOfTreeCounts = tobboganTrajectory.testLotsOfSlopes(slopesToTest, grid);
+            var total = helpers.Multiply(listOfTreeCounts);
+            Assert.Equal(336, total);
+
         }
     }
 }

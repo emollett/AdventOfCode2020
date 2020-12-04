@@ -10,6 +10,8 @@ namespace AdventOfCodeAnswers
             var day3 = new TobogganTrajectory();
             var day3Problem1 = day3.Problem1();
             Console.WriteLine(day3Problem1);
+            var day3Problem2 = day3.Problem2();
+            Console.WriteLine(day3Problem2);
 
             //var day2 = new PasswordChecker();
             //var day2Problem1 = day2.checkLotsOfPasswords("first");
