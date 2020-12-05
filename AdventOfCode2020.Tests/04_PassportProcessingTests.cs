@@ -60,15 +60,41 @@ namespace AdventOfCode2020.Tests
         }
 
         [Fact]
-        public void Should_count_present_passports()
+        public void Should_collect_present_passports()
         {
             var inputReaders = new InputReaders();
             var passportProcessing = new PassportProcessing();
             var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\04_PassportProcessing_Test.txt";
             var passports = inputReaders.readParagraphsToList(path);
 
-            var present = passportProcessing.checkManyPassportsArePresent(passports);
-            Assert.Equal(2, present);
+            var present = passportProcessing.collectPassports(passports);
+            Assert.Equal(2, present.Count);
+        }
+
+        [Fact]
+        public void Should_pass_valid_passports()
+        {
+            var inputReaders = new InputReaders();
+            var passportProcessing = new PassportProcessing();
+            var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\04_PassportProcessing_Test_validpassports.txt";
+            var passports = inputReaders.readParagraphsToList(path);
+            var present = passportProcessing.collectPassports(passports);
+
+            var validPassports = passportProcessing.checkIfValid(present);
+            Assert.Equal(4, validPassports.Count);
+        }
+
+        [Fact]
+        public void Should_not_pass_invalid_passports()
+        {
+            var inputReaders = new InputReaders();
+            var passportProcessing = new PassportProcessing();
+            var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\04_PassportProcessing_Test_invalidpassports.txt";
+            var passports = inputReaders.readParagraphsToList(path);
+            var present = passportProcessing.collectPassports(passports);
+
+            var validPassports = passportProcessing.checkIfValid(present);
+            Assert.Equal(0, validPassports.Count);
         }
     }
 }
