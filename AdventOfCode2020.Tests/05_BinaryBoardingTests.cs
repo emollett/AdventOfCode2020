@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode2020.Inputs;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
@@ -11,11 +12,8 @@ namespace AdventOfCode2020.Tests
         public void Should_find_correct_row()
         {
             var input = "FBFBBFF";
-            var rowsInPlane = 128;
             var binaryBoarding = new BinaryBoarding();
-
-            var row = binaryBoarding.binarySearch(input, rowsInPlane);
-            
+            var row = binaryBoarding.getNumber(input);
             Assert.Equal(44, row);
         }
 
@@ -23,11 +21,8 @@ namespace AdventOfCode2020.Tests
         public void Should_find_correct_column()
         {
             var input = "RLR";
-            var columnsInPlane = 8;
             var binaryBoarding = new BinaryBoarding();
-
-            var column = binaryBoarding.binarySearch(input, columnsInPlane);
-
+            var column = binaryBoarding.getNumber(input);
             Assert.Equal(5, column);
         }
 
@@ -43,6 +38,19 @@ namespace AdventOfCode2020.Tests
             Assert.Equal(44, seatInfo.Row);
             Assert.Equal(5, seatInfo.Column);
             Assert.Equal(357, seatInfo.Seat);
+        }
+
+        [Fact]
+        public void Should_be_same_number_of_tickets_and_seats()
+        {
+            var inputReaders = new InputReaders();
+            var binaryBoarding = new BinaryBoarding();
+            var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\05_BinaryBoarding.txt";
+            var tickets = inputReaders.readLines(path);
+
+            var seats = binaryBoarding.getMultipleSeatInfo(tickets);
+
+            Assert.Equal(tickets.Length, seats.Count);
         }
     }
 }
