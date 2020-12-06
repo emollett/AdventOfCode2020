@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xunit;
 
@@ -23,6 +24,15 @@ namespace AdventOfCode2020.Tests
             var questions = "abc abc abc";
             var uniqueQuestions = customCustoms.getUniqueQuestionsForGroup(questions);
             Assert.Equal(3, uniqueQuestions.Count);
+        }
+
+        [Fact]
+        public void Should_count_common_questions()
+        {
+            var customCustoms = new CustomCustoms();
+            var questions = "abc ab abd";
+            var commonQuestions = customCustoms.getDuplicateQuestionsForGroup(questions);
+            Assert.Equal(2, commonQuestions.Count);
         }
     }
 }

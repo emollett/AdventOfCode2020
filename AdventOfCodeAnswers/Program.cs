@@ -10,6 +10,8 @@ namespace AdventOfCodeAnswers
             var day6 = new CustomCustoms();
             var day6Problem1 = day6.problem1();
             Console.WriteLine(day6Problem1);
+            var day6Problem2 = day6.problem2();
+            Console.WriteLine(day6Problem2);
 
             //var day5 = new BinaryBoarding();
             //var day5Problem1 = day5.problem1();

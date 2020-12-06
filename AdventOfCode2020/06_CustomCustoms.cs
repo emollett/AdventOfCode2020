@@ -15,6 +15,22 @@ namespace AdventOfCode2020
             return uniqueQuestions;
         }
 
+        public List<char> getDuplicateQuestionsForGroup(string questions)
+        {
+            var individualAnswers = questions.Split(' ');
+            var numberOfMembers = individualAnswers.Length;
+
+            var splitQuestions = questions.ToCharArray().Where(c => !Char.IsWhiteSpace(c));
+            var duplicates = new List<char> { };
+            foreach (var character in individualAnswers[0])
+            {
+                var count = splitQuestions.Count(x => x == character);
+                if (count == numberOfMembers) duplicates.Add(character);
+            }
+
+            return duplicates;
+        }
+
         public int countUniqueQuestionsForManyGroups(List<string> groupsAnswers)
         {
             var uniqueCount = 0;
@@ -26,6 +42,17 @@ namespace AdventOfCode2020
             return uniqueCount;
         }
 
+        public int countDuplicateQuestionsForManyGroups(List<string> groupsAnswers)
+        {
+            var duplicateCount = 0;
+            foreach (var group in groupsAnswers)
+            {
+                var duplicateQuestions = getDuplicateQuestionsForGroup(group);
+                duplicateCount = duplicateCount + duplicateQuestions.Count;
+            }
+            return duplicateCount;
+        }
+
         public int problem1()
         {
             var inputReaders = new InputReaders();
@@ -34,6 +61,16 @@ namespace AdventOfCode2020
 
             var uniqueCount = countUniqueQuestionsForManyGroups(answers);
             return uniqueCount;
+        }
+
+        public int problem2()
+        {
+            var inputReaders = new InputReaders();
+            var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\06_CustomCustoms.txt";
+            var answers = inputReaders.readParagraphsToList(path);
+
+            var duplicateCount = countDuplicateQuestionsForManyGroups(answers);
+            return duplicateCount;
         }
     }
 }
