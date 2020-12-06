@@ -7,11 +7,16 @@ namespace AdventOfCodeAnswers
     {
         static void Main()
         {
-            var day4 = new PassportProcessing();
-            var day4Problem1 = day4.problem1();
-            Console.WriteLine(day4Problem1);
-            var day4Problem2 = day4.problem2();
-            Console.WriteLine(day4Problem2);
+            var day5 = new BinaryBoarding();
+            var day5Problem1 = day5.problem1();
+            Console.WriteLine(day5Problem1);
+           
+
+            //var day4 = new PassportProcessing();
+            //var day4Problem1 = day4.problem1();
+            //Console.WriteLine(day4Problem1);
+            //var day4Problem2 = day4.problem2();
+            //Console.WriteLine(day4Problem2);
 
             //var day3 = new TobogganTrajectory();
             //var day3Problem1 = day3.Problem1();
