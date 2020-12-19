@@ -39,17 +39,6 @@ namespace AdventOfCode2020.Tests
         }
 
         [Fact]
-        public void Should_loop_pointer()
-        {
-            var testList = new string[] { "aba", "bab", "cab", "dab", "eba" };
-            var test = new HandheldHalting();
-            var input = +8;
-            test.jump(input, testList);
-            Assert.Equal(3, test.Pointer);
-            Assert.Equal("dab", testList[test.Pointer]);
-        }
-
-        [Fact]
         public void Should_run_instructions()
         {
             var _inputReader = new InputReaders();
@@ -57,8 +46,18 @@ namespace AdventOfCode2020.Tests
             var program = _inputReader.readLines(path);
             var _handheldHalting = new HandheldHalting();
             var count = _handheldHalting.runProgram(program);
-            Assert.Equal(5, count);
+            Assert.Equal(5, count.MyCount);
         }
 
+        [Fact]
+        public void Should_run_replacement_instructions()
+        {
+            var _inputReader = new InputReaders();
+            var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\08_HandheldHalting_Test.txt";
+            var program = _inputReader.readLines(path);
+            var _handheldHalting = new HandheldHalting();
+            var count = _handheldHalting.runReplacementProgram(program);
+            Assert.Equal(8, count);
+        }
     }
 }

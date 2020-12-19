@@ -10,6 +10,8 @@ namespace AdventOfCodeAnswers
             var day8 = new HandheldHalting();
             var day8Problem1 = day8.problem1();
             Console.WriteLine(day8Problem1);
+            var day8Problem2 = day8.problem2();
+            Console.WriteLine(day8Problem2);
 
             //var day7 = new HandyHaversacks();
             //var day7Problem1 = day7.problem1();
