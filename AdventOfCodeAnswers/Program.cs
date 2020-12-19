@@ -7,9 +7,13 @@ namespace AdventOfCodeAnswers
     {
         static void Main()
         {
-            var day7 = new HandyHaversacks();
-            var day7Problem1 = day7.problem1();
-            Console.WriteLine(day7Problem1);
+            var day8 = new HandheldHalting();
+            var day8Problem1 = day8.problem1();
+            Console.WriteLine(day8Problem1);
+
+            //var day7 = new HandyHaversacks();
+            //var day7Problem1 = day7.problem1();
+            //Console.WriteLine(day7Problem1);
 
             //var day6 = new CustomCustoms();
             //var day6Problem1 = day6.problem1();
