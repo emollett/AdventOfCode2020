@@ -10,6 +10,8 @@ namespace AdventOfCodeAnswers
             var day9 = new EncodingError();
             var day9Problem1 = day9.problem1();
             Console.WriteLine(day9Problem1);
+            var day9Problem2 = day9.problem2();
+            Console.WriteLine(day9Problem2);
 
             //var day8 = new HandheldHalting();
             //var day8Problem1 = day8.problem1();
