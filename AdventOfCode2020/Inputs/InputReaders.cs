@@ -19,6 +19,17 @@ namespace AdventOfCode2020.Inputs
             return problemInput;
         }
 
+        public List<long> readLongNumbers(string path)
+        {
+            var problemInput = new List<long> { };
+            string[] readText = File.ReadAllLines(path);
+            foreach (string s in readText)
+            {
+                problemInput.Add(long.Parse(s));
+            };
+            return problemInput;
+        }
+
         public string[] readLines(string path)
         {
             string[] problemInput = File.ReadAllLines(path);

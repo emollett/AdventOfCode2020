@@ -11,11 +11,20 @@ namespace AdventOfCode2020
     {
         public string description { get; set; }
         public List<HandyHaversacks> contents { get; set; }
+        public int number { get; set; }
 
         public HandyHaversacks(string input)
         {
-            this.description = input.Contains("contain") ? input.Replace("bags", ":").Split(':')[0].Trim() : input;
-            this.contents = input.Contains("contain") ? getBagContents(input) : null;
+            this.description = input.Replace("bags", ":").Split(':')[0].Trim();
+            this.contents = getBagContents(input);
+            this.number = 0;
+        }
+
+        public HandyHaversacks(string input, int number)
+        {
+            this.description = input;
+            this.contents = null;
+            this.number = number;
         }
 
         public HandyHaversacks()
@@ -30,8 +39,8 @@ namespace AdventOfCode2020
             foreach (var content in contents)
             {
                 var cleanedContent = Regex.Replace(content, @"[\d-]", string.Empty).Replace("bags", "").Replace("bag", "").Replace(".", "").Trim();
-                
-                var bag = new HandyHaversacks(cleanedContent);
+                var number = Int32.Parse(Regex.Match(content.Replace("no", "0"), @"[\d-]").Value);
+                var bag = new HandyHaversacks(cleanedContent, number);
                 formattedContents.Add(bag);
             }
             return formattedContents;
@@ -68,6 +77,11 @@ namespace AdventOfCode2020
             var hashOfBags = new HashSet<HandyHaversacks>(bagsThatHoldGoldBags);
             return hashOfBags;
         }
+
+        //public int fitInThisBag(List<HandyHaversacks> bags, string myBigBag)
+        //{
+
+        //}
 
         public int problem1()
         {

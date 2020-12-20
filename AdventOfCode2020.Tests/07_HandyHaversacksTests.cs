@@ -23,7 +23,9 @@ namespace AdventOfCode2020.Tests
             var input = "light red bags contain 1 bright white bag, 2 muted yellow bags.";
             var bag = new HandyHaversacks(input);
             Assert.Equal("bright white", bag.contents[0].description);
+            Assert.Equal(1, bag.contents[0].number);
             Assert.Equal("muted yellow", bag.contents[1].description);
+            Assert.Equal(2, bag.contents[1].number);
         }
 
         [Fact]
@@ -50,5 +52,16 @@ namespace AdventOfCode2020.Tests
             Assert.Equal(4, numberOfGoldBags.Count);
         }
 
+        //[Fact]
+        //public void Should_count_how_many_bags_my_gold_one_can_hold()
+        //{
+        //    var inputReader = new InputReaders();
+        //    var path = @"C:\Users\emollett\Documents\sites\AdventOfCode2020\AdventOfCode2020\Inputs\07_HandyHaversacks_Test.txt";
+        //    var input = inputReader.readLines(path);
+        //    var handyHaversacks = new HandyHaversacks();
+        //    var bags = handyHaversacks.getAllTheBags(input);
+        //    var bagsICanHold = handyHaversacks.fitInThisBag(bags, "shiny gold");
+        //    Assert.Equal(32, bagsICanHold);
+        //}
     }
 }
