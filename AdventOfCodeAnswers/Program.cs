@@ -9,6 +9,7 @@ namespace AdventOfCodeAnswers
         {
             var day10 = new AdapterArray();
             Console.WriteLine(day10.problem1());
+            Console.WriteLine(day10.problem2());
 
             //var day9 = new EncodingError();
             //var day9Problem1 = day9.problem1();
