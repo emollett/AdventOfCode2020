@@ -77,7 +77,6 @@ namespace AdventOfCode2020
                     numberOfOnes = 0;
                 }
             }
-            
             return total;
         }
 

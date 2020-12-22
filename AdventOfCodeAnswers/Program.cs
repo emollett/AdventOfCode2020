@@ -7,9 +7,12 @@ namespace AdventOfCodeAnswers
     {
         static void Main()
         {
-            var day10 = new AdapterArray();
-            Console.WriteLine(day10.problem1());
-            Console.WriteLine(day10.problem2());
+            var day22 = new CrabCombat();
+            Console.WriteLine(day22.problem1());
+
+            //var day10 = new AdapterArray();
+            //Console.WriteLine(day10.problem1());
+            //Console.WriteLine(day10.problem2());
 
             //var day9 = new EncodingError();
             //var day9Problem1 = day9.problem1();
