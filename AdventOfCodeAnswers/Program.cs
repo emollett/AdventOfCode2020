@@ -9,6 +9,7 @@ namespace AdventOfCodeAnswers
         {
             var day22 = new CrabCombat();
             Console.WriteLine(day22.problem1());
+            Console.WriteLine(day22.problem2());
 
             //var day10 = new AdapterArray();
             //Console.WriteLine(day10.problem1());
